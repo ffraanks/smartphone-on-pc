@@ -1,0 +1,39 @@
+#!/bin/env bash
+
+# Dev: Franklin Souza
+# Telegram: @FranklinTech
+
+while true ; do
+  clear
+  echo 'Recomendo: A primeira conexão ser via CABO USB'
+  echo
+  echo 'Para se conectar via adb: Configurações - Sobre Telefone - Status - Endereço de IP'
+  echo
+  echo 'Ative o modo de desenvolvedor também e o ADB over network'
+  echo
+  echo 'ScrcPY CLI'
+  echo
+  echo 'Escolha uma das opções abaixo:'
+  echo
+  echo '[1] - Se conectar/desconectar via ADB IP Adress (WIFI)'
+  echo '[2] - Se conectar via Cabo USB'
+  echo '[3] - Se conectar/desconectar via ADB IP Adress (WIFI) COM RESOLUÇÃO PERSONALIZADA'
+  echo '[4] - Se conectar via Cabo USB COM RESOLUÇÃO PERSONALIZADA'
+  echo
+  echo 'Dica: Para sair pressione Ctrl + C OU feche essa janela'
+  echo
+  read OPC
+
+  if [ $OPC == '1' ] ; then
+    clear && wifi-connect
+
+  elif [ $OPC == '2' ] ; then
+    clear && cabo-usb 
+
+  elif [ $OPC == '3' ] ; then
+    clear && wifi-resolution
+
+  elif [ $OPC == '4' ] ; then
+    clear && cabo-resolution
+  fi
+done
