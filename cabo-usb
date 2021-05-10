@@ -1,0 +1,14 @@
+#!/bin/env bash
+
+# Dev: Franklin Souza
+# Telegram: @FranklinTech
+
+clear
+echo 'ScrcPY CLI'
+echo
+echo 'Conecte o cabo USB no PC e no seu device...'
+echo
+echo 'Press ENTER to continue and confirm...'
+echo
+read
+scrcpy -S --disable-screensaver
