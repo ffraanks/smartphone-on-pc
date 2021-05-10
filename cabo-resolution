@@ -1,0 +1,18 @@
+#!/bin/env bash
+
+# Dev: Franklin Souza
+# Telegram: @FranklinTech
+
+clear
+echo 'ScrcPY CLI'
+echo
+echo 'Conecte o cabo USB no PC e no seu device...'
+echo
+echo 'Press ENTER to continue and confirm...'
+read
+echo
+echo 'Digite o maximo de resolução que você queira (Ex: 720):'
+echo
+read RESO1
+echo
+scrcpy -S -m$RESO1 --disable-screensaver
