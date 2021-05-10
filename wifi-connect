@@ -1,0 +1,39 @@
+#!/bin/env bash
+
+# Dev: Franklin Souza
+# Telegram: @FranklinTech
+
+clear
+echo 'ScrcPY CLI'
+echo
+echo 'Deseja fazer o que?'
+echo
+echo '[1] - Conectar'
+echo '[2] - Desconectar'
+echo
+read MENU
+echo
+if [ $MENU == '1' ] ;then
+  clear
+  echo 'Lista de devices:'
+  echo
+  adb devices
+  echo
+  echo 'Digite o IP Adress do seu device (OBS: NÃO PRECISA DO :5555 - Ex: 000.000.0.000):'
+  echo
+  read IPADRESS
+  echo
+  adb connect $IPADRESS:5555 && scrcpy -S --disable-screensaver
+
+elif [ $MENU == '2' ] ; then
+  clear
+  echo 'Lista de devices:'
+  echo
+  adb devices
+  echo
+  echo 'Digite o IP do device que você que desconectar (OBS: NÃO PRECISA DO :5555 - Ex: 000.000.0.000):'
+  echo
+  read IPDIS
+  echo
+  adb disconnect $IPDIS:5555
+fi
