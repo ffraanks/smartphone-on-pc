@@ -16,8 +16,7 @@
 
 ##### Arch Linux:
 ```
-sudo pacman -S android-tools
-yay -S scrcpy
+sudo pacman -S android-tools scrcpy
 ```
 
 # Siga os passos a seguir:
